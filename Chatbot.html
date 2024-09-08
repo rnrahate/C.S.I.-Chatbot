@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CIA Chatbot</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Chatbot.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  
+  <!-- Sidebar menu for chat history -->
+  <div id="sidebar" class="sidebar">
+    <h2>Chat History</h2>
+    <ul id="chatHistory"></ul>
+  </div>
+
+  <!-- Main chatbot container -->
+  <div class="chat-container" style="margin-top: 150px;"> <!-- Shifted chat down -->
+    <div class="chat-header">
+      <span id="menuToggle" class="menu-toggle">&#9776;</span> <!-- Hamburger menu -->
+      <span id="newInquiry" class="new-inquiry">New Inquiry</span> <!-- New Inquiry button -->
+
+      <!-- Profile and Share Container -->
+      <div class="profile-share-container">
+        <div class="profile-icon" id="profileIcon">
+          <i class="fas fa-user-circle"></i>
+          <div class="profile-dropdown">
+            <span id="signIn" class="sign-in-option">Sign In</span>
+          </div>
+        </div>
+
+        <div id="shareChat" class="share-chat">
+          <img src="images/icons8-upload-50.png" alt="Share Chat" class="upload-icon">
+          <div class="share-chat-label">Share <br> Chat</div>
+        </div>
+      </div>
+      <h1 class="bot-name">C.I.A. Chatbot</h1>
+    </div>
+
+    <!-- Navigation Panel -->
+    <div class="nav-panel">
+      <ul class="nav-options">
+        <li><a href="#option1">Features</a></li>
+        <li><a href="#option2">About us</a></li>
+        <li><a href="#option3">Contact us</a></li>
+      </ul>
+    </div>
+
+    <div class="chat-box" id="chatBox">
+      <div class="chat-message bot-message">Hello! How can I assist you today with college information?</div>
+    </div>
+
+    <div class="input-area">
+      <input type="text" id="userInput" placeholder="Type your message here..." autocomplete="off">
+      <button id="sendButton">Send</button>
+    </div>
+  </div>
+
+<!-- Photo Reel Container -->
+  <div class="photo-reel-container">
+    <div class="photo-reel">
+      <div class="photo-item"><img src="images\college1.jpg" alt="Photo 1"></div>
+      <div class="photo-item"><img src="images\college2.jpg" alt="Photo 2"></div>
+      <div class="photo-item"><img src="images\college3.jpg" alt="Photo 3"></div>
+      <div class="photo-item"><img src="images\college4.jpg" alt="Photo 4"></div>
+      <div class="photo-item"><img src="images\college5.jpeg" alt="Photo 5"></div>
+      <div class="photo-item"><img src="images\college6.jpg" alt="Photo 6"></div>
+      <div class="photo-item"><img src="images\college7.jpg"alt="Photo 7"></div>
+      <div class="photo-item"><img src="images\college8.jpeg"alt="Photo 8"></div>
+      <div class="photo-item"><img src="images\college9.jpg"alt="Photo 9"></div>
+      <div class="photo-item"><img src="images\college10.jpeg" alt="Photo 10"></div>
+      <div class="photo-item"><img src="images\college11.png" alt="Photo 11"></div>
+      <div class="photo-item"><img src="images\college12.png" alt="Photo 12"></div>
+      <div class="photo-item"><img src="images\college13.png" alt="Photo 13"></div>
+      <div class="photo-item"><img src="images\college14.png" alt="Photo 14"></div>
+      <div class="photo-item"><img src="images\college15.jpg" alt="Photo 15"></div>
+      <div class="photo-item"><img src="images\college16.jpg" alt="Photo 16"></div>
+      <div class="photo-item"><img src="images\college17.jpg" alt="Photo 17"></div>
+      <div class="photo-item"><img src="images\college18.jpg" alt="Photo 18"></div>
+      <div class="photo-item"><img src="images\college19.jpg" alt="Photo 19"></div>
+      <div class="photo-item"><img src="images\college20.jpg" alt="Photo 20"></div>7
+    </div>
+  </div>
+  
+
+  <script src="Chatbot.js"></script>
+</body>
+</html>
