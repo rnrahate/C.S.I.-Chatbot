@@ -131,3 +131,12 @@ function sendMessageToBot(userMessage) {
     unlockMessaging();
   }, 2000); // Adjust the timeout for actual bot response time
 }
+document.addEventListener('DOMContentLoaded', () => {
+  const userInput = document.getElementById('userInput');
+  const messages = document.getElementById('messages');
+  
+  userInput.addEventListener('input', () => {
+      // Update the messages div with the user's input
+      messages.textContent = userInput.value;
+  });
+});
