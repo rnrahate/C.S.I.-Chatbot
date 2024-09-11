@@ -13,7 +13,7 @@
 <body>
   <div class="login-container">
     <h1>Welcome to CIA Chatbot</h1>
-    <p>Please sign in to continue</p>
+    <p style="color: green;">Please sign in to continue</p>
 
     <!-- Google Sign-In Button -->
     <div id="google-signin-button"></div>
@@ -22,17 +22,18 @@
     <div class="email-login">
       <h2>Login with Email</h2>
       <form id="email-login-form">
-        <input type="email" id="email" placeholder="Enter your email" required>
-        <input type="password" id="password" placeholder="Enter your password" required>
-        <button type="submit">Login</button>
+        <input type="email" id="email" placeholder="Enter your email" required style="height: 35px;width: 163px;border-radius: 23px; text-align: center;">
+        <input type="password" id="password" placeholder="Enter your password" required style="height: 35px;width: 163px;border-radius: 23px; text-align: center;">
+        <button type="submit" style="height: 33px;width: 67px;text-align: center;border-radius: 23px; position: relative;top: 10px;cursor: pointer;">Login</button>
       </form>
     </div>
     <!-- Phone Number Login with OTP -->
     <div class="phone-login">
       <h2>Login with Phone</h2>
       <form id="phone-login-form">
-        <input type="tel" id="phone" placeholder="Enter your phone number" required>
-        <button type="button" id="get-otp">Get OTP</button>
+        <input type="tel" id="phone" placeholder="Enter your phone number" required style="height: 35px;width: 163px;border-radius: 23px; text-align: center;">
+        <button type="button" id="get-otp" style="height: 33px;width: 67px;text-align: center;border-radius: 23px; position: relative;top: 10px;cursor: pointer;">Get OTP</button>
+          <a href="/Chatbot.html"type="button" style="height: 43px;width: 7px;text-align: center;border-radius: 23px; position: relative;top: 10px;cursor: pointer;text-decoration: none;border: 2px solid black;color: black;font-size: 25px;font-weight: 300;text-align: center;">Done</a>
         <input type="text" id="otp" placeholder="Enter OTP" style="display:none;">
         <button type="submit" id="verify-otp" style="display:none;">Verify OTP</button>
       </form>

@@ -74,3 +74,60 @@ document.addEventListener('DOMContentLoaded', function () {
     e.stopPropagation();
   });
 });
+
+
+//new
+// const loginsec = document.querySelector(".login-section");
+// const loginlink = document.querySelector(".login-link");
+// const registerlink = document.querySelector(".register-link");
+// registerlink.addEventListener("click", () => {
+//   loginsec.classList.add("active");
+// });
+// loginlink.addEventListener("click", () => {
+//   loginsec.classList.remove("active");
+// });
+
+// Function to lock the message input (disable input field)
+function lockMessaging() {
+  const messageInput = document.getElementById('messageInput');
+  messageInput.disabled = true;
+}
+
+// Function to unlock the message input (enable input field)
+function unlockMessaging() {
+  const messageInput = document.getElementById('messageInput');
+  messageInput.disabled = false;
+}
+
+// Event listener for the send button click
+document.getElementById('sendButton').addEventListener('click', function() {
+  const messageInput = document.getElementById('messageInput');
+  const userMessage = messageInput.value;
+
+  // If the user has typed a message
+  if (userMessage.trim() !== "") {
+    // Lock the input field to prevent further messages
+    lockMessaging();
+
+    // Send the message to the bot (e.g., using an API call or chatbot logic)
+    sendMessageToBot(userMessage);
+
+    // Clear the input field after sending
+    messageInput.value = "";
+  }
+});
+
+// Example function to send the message to the bot
+function sendMessageToBot(userMessage) {
+  // Logic to send the message to the bot (e.g., API call)
+  console.log("User message:", userMessage);
+
+  // Simulate bot's response delay
+  setTimeout(function() {
+    const botResponse = "This is the bot's response.";
+    console.log("Bot response:", botResponse);
+
+    // Unlock the input field once the bot has responded
+    unlockMessaging();
+  }, 2000); // Adjust the timeout for actual bot response time
+}
