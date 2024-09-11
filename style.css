@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins",sans-serif;
+}
+body{
+    top: -16px;
+    height: 100%;
+    width: 100%;
+    background: #ffffff;
+    color: black;
+     overflow-y: auto;
+  
+}
+/* header */
+.header{
+    position:relative;
+    top: -8px;
+    left: 0;
+    width: 100%;
+    padding: 25px 13%;
+   background-color: #ff0088;
+    display: flex;
+    justify-content: center;;
+    align-items: center;
+    color: black;
+    z-index: 10;
+
+}
+/* navbar and all elements */
+.header .navbar a{
+    position: relative;
+    top: -3px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #181818;
+    margin-right: 30px;
+    text-decoration: none;
+    
+}
+.navbar a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #ffffff;
+    bottom: -5px;
+    border-radius: 5px;
+    transform: translateY(10px);
+    opacity: 0;
+    transition: .5s ease;
+}
+.navbar a:hover:after{
+    transform: translateY(0);
+    opacity: 1;
+}
+/* users send button */
+#sendButton{
+    position: relative;
+    width: 90px;
+    top: 3px;
+    left: 45px;
+    background-color: transparent;
+    color: black;
+}
+#sendButton:hover{
+    background-color: #ff0088;
+}
+/* main container of the page where there are all the elements present */
+.cont{
+    width: 956px;
+    height: 503px;
+    position: relative;
+    top: -134px;
+   
+}/* Profile Icon */
+.profile-icon {
+  font-size: 24px;
+  cursor: pointer;
+  margin-right: 10px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.profile-icon:hover {
+  color: #007bff;
+}
+
+
+/* responsive design */
+
+ 
+ /* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    /* For tablets and smaller devices */
+    
+    .header {
+        flex-direction: column;
+        padding: 20px 10px;
+    }
+    
+    .header .navbar a {
+        font-size: 1rem;
+        margin-right: 15px;
+    }
+
+    .cont {
+        width: 95%;
+        padding-top: 10px;
+    }
+
+    #sendButton {
+        left: 0;
+    }
+    
+    .share-chat {
+        margin-left: 5%;
+    }
+
+    .profile-icon {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    /* For mobile devices */
+    
+    .header {
+        padding: 15px 5px;
+    }
+
+    .header .navbar a {
+        font-size: 0.9rem;
+        margin-right: 10px;
+    }
+
+    .cont {
+        width: 100%;
+        padding-top: 5px;
+    }
+
+    .profile-icon {
+        font-size: 1rem;
+    }
+
+    .share-chat {
+        margin-left: 2%;
+    }
+    
+    .share-chat-label {
+        font-size: 0.8rem;
+    }
+
+    #sendButton {
+        width: 70px;
+    }
+}
