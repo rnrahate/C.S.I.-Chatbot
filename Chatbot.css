@@ -13,6 +13,17 @@ html, body {
   font-family: 'Roboto', sans-serif; /* Provide a default font */
   margin: 0;
   color: black;
+  overflow: hidden; /* Ensure no scroll during animation */
+  animation: slideDown 1s ease-out; /* Apply the animation */
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%); /* Start from above the page */
+  }
+  to {
+    transform: translateY(0); /* End at normal position */
+  }
 }
 
 body {
@@ -25,6 +36,7 @@ body {
   position: relative;
   height: 100%;
   background-color: #000;
+  transition: background-color 0.3s ease, transform 0.3s ease; 
 }
 
 /* Bot name styling */
